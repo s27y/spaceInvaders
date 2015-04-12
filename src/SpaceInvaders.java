@@ -281,7 +281,6 @@ public class SpaceInvaders extends JApplet {
 			}
 
 			else {
-
 				g.setColor(Color.white);
 				int width = m_launcher_img.getWidth(this), height = m_launcher_img
 						.getHeight(this);
@@ -294,8 +293,6 @@ public class SpaceInvaders extends JApplet {
 				g.drawString("Missile Fired: " + bltList.size(),
 						this.getWidth() - 120, 10);
 				g.drawString("Score:" + this.hitedEnemy(emList), 10, 10);
-
-				// g.drawString("^", m_x, this.getHeight());
 
 				for (EnemyThread et : emList) {
 					if (et.state == GameState.HITED) {
@@ -314,9 +311,7 @@ public class SpaceInvaders extends JApplet {
 							g.drawImage(m_em_img, et.x_position, et.y_position,
 									width1, height1, this);
 						}
-
 					}
-
 				}
 				for (BulletThread bt : bltList) {
 					if (bt.m_stat == GameState.FIRED)
@@ -355,7 +350,6 @@ public class SpaceInvaders extends JApplet {
 				break;
 			}
 			case KeyEvent.VK_SPACE: {
-
 				break;
 			}
 			}
@@ -370,7 +364,6 @@ public class SpaceInvaders extends JApplet {
 				for (EnemyThread et : emList) {
 					et.start();
 				}
-
 				this.repaint();
 			} else {
 				if (e.getKeyCode() == KeyEvent.VK_SPACE) {
